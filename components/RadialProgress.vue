@@ -290,19 +290,21 @@ export default {
       this.currentAngle = this.completedSteps * this.circleSlice
       this.gotoPoint()
     },
-    handleRadialAnimation() {
+    handleRadialAnimationPlus() {
         setTimeout(() => {
             if (this.completedSteps < this.toComplete) {
                 this.completedSteps += 1
-                this.handleRadialAnimation()
+                this.handleRadialAnimationPlus()
+            } else {
+                this.completedSteps = this.toComplete
             }
-        }, 10)
+        }, this.fillTimeOut)
     }
   },
   watch: {
     startFiling (val) {
         if (val)
-            this.handleRadialAnimation()
+            this.handleRadialAnimationPlus()
     },
     totalSteps () {
       this.changeProgress({ isAnimate: true })
@@ -333,6 +335,7 @@ export default {
     align-items: center;
     justify-content: center;
     text-align: center;
+    transition: 1s;
 }
 .radial-progress-inner {
     width: 100%;
@@ -345,5 +348,11 @@ export default {
     align-items: center;
     justify-content: center;
     text-align: center;
+    transition: 1s;
 }
+
+.radial-progress-container svg {
+    transition: 1s;
+}
+
 </style>

@@ -4,8 +4,8 @@
     <div class="cool-img-bg">
         <div id="top-section-id" class="container transparent-black">
             <div class="top-border">
-                <h2 class="title">یوسف سلملیان</h2>
-                <p class="subtitle">من برنامه نویس هستم</p>
+                <h2 class="title">in development</h2>
+                <p class="subtitle">درحال توسعه</p>
             </div>
         </div>
     </div>
@@ -60,7 +60,7 @@
                         :diameter="180"
                         :total-steps="totalSteps"
                         :toComplete="90"
-                        :fillTimeOut="50"
+                        :fillTimeOut="1"
                     >
                     </radial-progress>
                     <h2>python</h2>
@@ -71,7 +71,7 @@
                         :diameter="180"
                         :total-steps="totalSteps"
                         :toComplete="90"
-                        :fillTimeOut="50"
+                        :fillTimeOut="1"
                     >
                     </radial-progress>
                     <h2>python</h2>
@@ -82,7 +82,7 @@
                         :diameter="180"
                         :total-steps="totalSteps"
                         :toComplete="90"
-                        :fillTimeOut="50"
+                        :fillTimeOut="1"
                     >
                     </radial-progress>
                     <h2>python</h2>
@@ -93,7 +93,7 @@
                         :diameter="180"
                         :total-steps="totalSteps"
                         :toComplete="90"
-                        :fillTimeOut="50"
+                        :fillTimeOut="1"
                     >
                     </radial-progress>
                     <h2>python</h2>
@@ -104,7 +104,7 @@
                         :diameter="180"
                         :total-steps="totalSteps"
                         :toComplete="90"
-                        :fillTimeOut="50"
+                        :fillTimeOut="1"
                     >
                     </radial-progress>
                     <h2>python</h2>
@@ -115,7 +115,7 @@
                         :diameter="180"
                         :total-steps="totalSteps"
                         :toComplete="90"
-                        :fillTimeOut="50"
+                        :fillTimeOut="1"
                     >
                     </radial-progress>
                     <h2>python</h2>
@@ -126,7 +126,7 @@
                         :diameter="180"
                         :total-steps="totalSteps"
                         :toComplete="90"
-                        :fillTimeOut="50"
+                        :fillTimeOut="1"
                     >
                     </radial-progress>
                     <h2>python</h2>
@@ -142,7 +142,33 @@
                 <h5>my previous associations</h5>
             </div>
             <div class="context-content">
-                <p>this are expes</p>
+                <div class="circle-date">
+                    <div class="circle-date-item">
+                        <div class="top-space"></div>
+                        <h5>march,2014</h5>
+                        <h5>present</h5>
+                    </div>
+                    <div class="top-space"></div>
+                    <div class="circle-date-item">
+                        <div class="top-space"></div>
+                        <h5>march,2014</h5>
+                        <h5>present</h5>
+                    </div>
+                </div>
+                <div class="work-cards">
+                    <div class="card-contain">
+                        <div class="arrow-shape"></div>
+                        <div class="card">
+                            <p>hello</p>
+                        </div>
+                    </div>
+                    <div class="card-contain"> 
+                        <div class="arrow-shape"></div>
+                        <div class="card">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -153,7 +179,21 @@
                 <h5>what I have done in my academic career</h5>
             </div>
             <div class="context-content">
-                <p>these are educ</p>
+                <div class="circle-date">
+                    <div class="circle-date-item">
+                        <div class="top-space"></div>
+                        <h5>march,2014</h5>
+                        <h5>present</h5>
+                    </div>
+                </div>
+                <div class="work-cards">
+                    <div class="card-contain">
+                        <div class="arrow-shape"></div>
+                        <div class="card">
+                            <p>hello</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
