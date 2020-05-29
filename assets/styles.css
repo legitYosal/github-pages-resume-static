@@ -15,6 +15,7 @@
     align-items: center;
     text-align: center;
     background-color: #262b37;
+    z-index: 100;
 }
 .dynamic-nav-bar a {
     padding-top: 2.5vh;
@@ -172,4 +173,26 @@ p {
 
 #portfolio-section-id {
     background-color: #2bb3dd;
+}
+
+.circular-item {
+    float: left;
+    display: flex;
+    width: 33%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+
+#skills-section-id .context-content {
+    padding-left: 1vh;
+    padding-right: 1vh;
+    max-width: 100vh;
+    margin: auto;
 }

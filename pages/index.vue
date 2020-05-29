@@ -55,7 +55,83 @@
                 <h5>That I can say i'm good at</h5>
             </div>
             <div class="context-content">
-                <p>this are those guys</p>
+                <div class="circular-item">
+                    <radial-progress
+                        :diameter="180"
+                        :total-steps="totalSteps"
+                        :toComplete="90"
+                        :fillTimeOut="50"
+                    >
+                    </radial-progress>
+                    <h2>python</h2>
+                    <p>this is very cool</p>
+                </div>
+                <div class="circular-item">
+                    <radial-progress
+                        :diameter="180"
+                        :total-steps="totalSteps"
+                        :toComplete="90"
+                        :fillTimeOut="50"
+                    >
+                    </radial-progress>
+                    <h2>python</h2>
+                    <p>this is very cool</p>
+                </div>
+                <div class="circular-item">
+                    <radial-progress
+                        :diameter="180"
+                        :total-steps="totalSteps"
+                        :toComplete="90"
+                        :fillTimeOut="50"
+                    >
+                    </radial-progress>
+                    <h2>python</h2>
+                    <p>this is very cool</p>
+                </div>
+                <div class="circular-item">
+                    <radial-progress
+                        :diameter="180"
+                        :total-steps="totalSteps"
+                        :toComplete="90"
+                        :fillTimeOut="50"
+                    >
+                    </radial-progress>
+                    <h2>python</h2>
+                    <p>this is very cool</p>
+                </div>
+                <div class="circular-item">
+                    <radial-progress
+                        :diameter="180"
+                        :total-steps="totalSteps"
+                        :toComplete="90"
+                        :fillTimeOut="50"
+                    >
+                    </radial-progress>
+                    <h2>python</h2>
+                    <p>this is very cool</p>
+                </div>
+                <div class="circular-item">
+                    <radial-progress
+                        :diameter="180"
+                        :total-steps="totalSteps"
+                        :toComplete="90"
+                        :fillTimeOut="50"
+                    >
+                    </radial-progress>
+                    <h2>python</h2>
+                    <p>this is very cool</p>
+                </div>
+                <div class="circular-item">
+                    <radial-progress
+                        :diameter="180"
+                        :total-steps="totalSteps"
+                        :toComplete="90"
+                        :fillTimeOut="50"
+                    >
+                    </radial-progress>
+                    <h2>python</h2>
+                    <p>this is very cool</p>
+                </div>
             </div>
         </div>
     </div>
@@ -107,12 +183,16 @@
 </template>
 
 <script>
+import RadialProgress from '~/components/RadialProgress'
 
 export default {
     components: {
+        'radial-progress': RadialProgress,
     },
     data () {
         return {
+            completedSteps: 70,
+            totalSteps: 100,
             lang: 'fa',
             in_top_section: null,
             in_about_section: null,
