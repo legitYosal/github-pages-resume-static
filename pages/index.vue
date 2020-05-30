@@ -1,6 +1,7 @@
 <template>
 <div>
-        
+    <!-- <a class="" href="#">english</a> -->
+    <a class="language-buttom" href="#">persian</a>
     <div class="cool-img-bg">
         <div id="top-section-id" class="container transparent-black">
             <div class="top-border">
@@ -19,10 +20,7 @@
         <a :class="{ active: !in_education_section && in_portfolio_section }" href="#">portfolio</a>
         <a :class="{ active: !in_portfolio_section && in_contact_section }" href="#">contact</a>
 
-        <a href="#">other</a>
 
-        <a href="#">english</a>
-        <a href="#">persian</a>
     </div>
     </div>
     <div id="about-section-id" class="container-dynamic about-bg">
@@ -215,7 +213,36 @@
                 <h5>please feel free if you whould like to have a chat</h5>
             </div>
             <div class="context-content">
-                <p>these are contact</p>
+                <div class="google-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.095871522228!2d59.52744881550642!3d36.3099819028393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f6c925d73674337%3A0x6325879f5fb01d18!2sFerdowsi%20University%20of%20Mashhad!5e0!3m2!1sen!2spl!4v1590845979554!5m2!1sen!2spl" 
+                        width="100%" 
+                        height="450" 
+                        frameborder="0" 
+                        style="padding:0;margin:0;border-top: 0.5vh dashed #2e9878; border-bottom: 0.5vh dashed #2e9878;" 
+                        allowfullscreen="no" 
+                        aria-hidden="false" 
+                        tabindex="0"
+                        scrolling="no"
+                    ></iframe>
+                </div>
+                <div class="address-content-bg">
+                <div class="address-content">
+                    <div class="contact-details">
+                        <h1>details</h1>
+                        <p>my number is 323wedwefwefwefwef</p>
+                        <p>this is my address</p>
+                    </div>
+                    <div class="contact-with-email">
+                        <h1>contact now</h1>
+                        <div class="inp-container">
+                            <input spellcheck="false" placeholder="your name..." type="name" name="" class="inp inp-top-l">
+                            <input spellcheck="false" placeholder="your email..." type="email" name="" class="inp inp-top-r">
+                            <textarea spellcheck="false" placeholder="your message..." type="text" name="" class="inp inp-botton"></textarea>
+                            <a href="" class="email-buttom">send message</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
     </div>
