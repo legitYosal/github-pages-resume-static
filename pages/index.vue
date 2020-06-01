@@ -18,7 +18,7 @@
         <a @click="scrollVanilla" :class="{ active: !in_skills_section && in_experience_section }" href="#experience-section-id">experience</a>
         <a @click="scrollVanilla" :class="{ active: !in_experience_section && in_education_section }" href="#education-section-id">education</a>
         <a @click="scrollVanilla" :class="{ active: !in_education_section && in_portfolio_section }" href="#portfolio-section-id">portfolio</a>
-        <a :class="{ active: !in_portfolio_section && in_contact_section }" href="#contact-section-id">contact</a>
+        <a @click="scrollVanilla" :class="{ active: !in_portfolio_section && in_contact_section }" href="#contact-section-id">contact</a>
 
 
     </div>
