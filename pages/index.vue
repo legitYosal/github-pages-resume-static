@@ -12,13 +12,13 @@
     </div>
     <div class="nav-place-holder">
     <div id="dynamic-nav-bar-id" class="dynamic-nav-bar">
-        <a :class="{ active: in_top_section }" href="#">top</a>
-        <a :class="{ active: !in_top_section && in_about_section }" href="#">about</a>
-        <a :class="{ active: !in_about_section && in_skills_section }" href="#">skills</a>
-        <a :class="{ active: !in_skills_section && in_experience_section }" href="#">experience</a>
-        <a :class="{ active: !in_experience_section && in_education_section }" href="#">education</a>
-        <a :class="{ active: !in_education_section && in_portfolio_section }" href="#">portfolio</a>
-        <a :class="{ active: !in_portfolio_section && in_contact_section }" href="#">contact</a>
+        <a @click="scrollVanilla" :class="{ active: in_top_section }" href="#top-section-id">top</a>
+        <a @click="scrollVanilla" :class="{ active: !in_top_section && in_about_section }" href="#about-section-id">about</a>
+        <a @click="scrollVanilla" :class="{ active: !in_about_section && in_skills_section }" href="#skills-section-id">skills</a>
+        <a @click="scrollVanilla" :class="{ active: !in_skills_section && in_experience_section }" href="#experience-section-id">experience</a>
+        <a @click="scrollVanilla" :class="{ active: !in_experience_section && in_education_section }" href="#education-section-id">education</a>
+        <a @click="scrollVanilla" :class="{ active: !in_education_section && in_portfolio_section }" href="#portfolio-section-id">portfolio</a>
+        <a :class="{ active: !in_portfolio_section && in_contact_section }" href="#contact-section-id">contact</a>
 
 
     </div>
@@ -281,6 +281,18 @@ export default {
         }
     },
     methods: {
+        scrollVanilla(event) {
+            event.preventDefault()
+            let el = document.querySelector(
+                event.target.getAttribute('href')
+            )
+            let bodyRect = document.body.getBoundingClientRect().top
+            let elRect = el.getBoundingClientRect().top
+            window.scrollTo({
+                top: (elRect - bodyRect + 1),
+                behavior: 'smooth'
+            })
+        },
         handleObservers() {
             new IntersectionObserver(entries => {
                 this.in_top_section = entries[0].isIntersecting
@@ -292,38 +304,46 @@ export default {
                     nav_el.style.position = 'fixed'
                     nav_el.style.top = '0'
                 }
+                console.log('top')
+
             }).observe(
                 document.querySelector('#top-section-id')
             )
 
             new IntersectionObserver(entries => {
                 this.in_about_section = entries[0].isIntersecting
+                console.log('about')
             }).observe(
                 document.querySelector('#about-section-id')
             )
 
             new IntersectionObserver(entries => {
                 this.in_skills_section = entries[0].isIntersecting
+                console.log('skills')
             }).observe(
                 document.querySelector('#skills-section-id')
             )
             new IntersectionObserver(entries => {
                 this.in_experience_section = entries[0].isIntersecting
+                console.log('experience')
             }).observe(
                 document.querySelector('#experience-section-id')
             )
             new IntersectionObserver(entries => {
                 this.in_education_section = entries[0].isIntersecting
+                console.log('education')
             }).observe(
                 document.querySelector('#education-section-id')
             )
             new IntersectionObserver(entries => {
                 this.in_portfolio_section = entries[0].isIntersecting
+                console.log('portfolio')
             }).observe(
                 document.querySelector('#portfolio-section-id')
             )
             new IntersectionObserver(entries => {
                 this.in_contact_section = entries[0].isIntersecting
+                console.log('contact')
             }).observe(
                 document.querySelector('#contact-section-id')
             )

@@ -1,6 +1,10 @@
 .about-bg {
     background-color: #00bdbd;
 }
+
+html {
+    scroll-behavior: smooth;
+}
 .nav-place-holder {
     height: 7vh;
     background-color: #262b37;
@@ -378,4 +382,8 @@ iframe {
 }
 .email-buttom:hover {
     background-color: #f5534b;
+}
+
+body {
+    /*padding-top: 100px;*/
 }
