@@ -387,3 +387,9 @@ iframe {
 body {
     /*padding-top: 100px;*/
 }
+
+.buttom-bg {
+    width: 100%;
+    height: 150px;
+    background-color: #bd006f;
+}

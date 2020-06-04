@@ -243,6 +243,10 @@
                     </div>
                 </div>
                 </div>
+                <div class="buttom-bg">
+                    <p>hello</p>
+                    <!-- <v-icon name="beer"/> -->
+                </div>
             </div>
         </div>
     </div>
@@ -251,6 +255,7 @@
 
 <script>
 import RadialProgress from '~/components/RadialProgress'
+// import { mapMutations } from 'vuex'
 
 export default {
     components: {
@@ -279,8 +284,26 @@ export default {
         ){
             this.handleObservers()
         }
+
+        window.addEventListener('scroll', this.handleScroll)
+        window.scrollTo({
+            top: this.$store.state.Ypos,
+            behavior: 'smooth'
+        })
     },
     methods: {
+        printStore() {
+            console.log('print store called')
+            setTimeout(() => {
+                console.log('have to scroll to: ', 
+                    this.$store.state.Ypos
+                )
+                this.printStore()
+            },1000)
+        },
+        handleScroll(event) {
+            this.$store.commit('setYpos', window.scrollY)
+        },
         scrollVanilla(event) {
             event.preventDefault()
             let el = document.querySelector(
@@ -304,7 +327,7 @@ export default {
                     nav_el.style.position = 'fixed'
                     nav_el.style.top = '0'
                 }
-                console.log('top')
+                // console.log('top')
 
             }).observe(
                 document.querySelector('#top-section-id')
@@ -312,38 +335,38 @@ export default {
 
             new IntersectionObserver(entries => {
                 this.in_about_section = entries[0].isIntersecting
-                console.log('about')
+                // console.log('about')
             }).observe(
                 document.querySelector('#about-section-id')
             )
 
             new IntersectionObserver(entries => {
                 this.in_skills_section = entries[0].isIntersecting
-                console.log('skills')
+                // console.log('skills')
             }).observe(
                 document.querySelector('#skills-section-id')
             )
             new IntersectionObserver(entries => {
                 this.in_experience_section = entries[0].isIntersecting
-                console.log('experience')
+                // console.log('experience')
             }).observe(
                 document.querySelector('#experience-section-id')
             )
             new IntersectionObserver(entries => {
                 this.in_education_section = entries[0].isIntersecting
-                console.log('education')
+                // console.log('education')
             }).observe(
                 document.querySelector('#education-section-id')
             )
             new IntersectionObserver(entries => {
                 this.in_portfolio_section = entries[0].isIntersecting
-                console.log('portfolio')
+                // console.log('portfolio')
             }).observe(
                 document.querySelector('#portfolio-section-id')
             )
             new IntersectionObserver(entries => {
                 this.in_contact_section = entries[0].isIntersecting
-                console.log('contact')
+                // console.log('contact')
             }).observe(
                 document.querySelector('#contact-section-id')
             )
