@@ -391,5 +391,33 @@ body {
 .buttom-bg {
     width: 100%;
     height: 150px;
-    background-color: #bd006f;
+    background-color: #eeeeee;
+    display: flex;
+    /*text-align: center;*/
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    margin-left: 6px;
+    margin-right: 6px;
+    background-color: #eeeeee;
+    border-radius: 100px;
+    transition: 1s;
+}
+
+svg.telegram-i {
+    color: #34ace0;
+}
+
+svg.gitlab-i {
+    color: #dc4128;
+}
+svg.github-i {
+    color: black;
+}
+
+svg:hover {
+    /*background-color: white;*/
+    color: green;
 }

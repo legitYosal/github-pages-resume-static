@@ -29,7 +29,9 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/localStorage.js', ssr: false }
+    { src: '~/plugins/localStorage.js', ssr: false },
+    { src: '~/plugins/vue-awesome.js'},
+    { src: '~/plugins/vue-fontawesome.js'}
   ],
   /*
   ** Nuxt.js dev-modules
@@ -45,9 +47,7 @@ export default {
   ** Build configuration
   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
+    vendor: ['vue-awesome'],
     extend (config, ctx) {
     }
   }

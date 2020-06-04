@@ -244,8 +244,19 @@
                 </div>
                 </div>
                 <div class="buttom-bg">
-                    <p>hello</p>
-                    <!-- <v-icon name="beer"/> -->
+                    <a @click="handleRedirect" href="https://github.com/usefss">
+                        <v-icon class="github-i" scale="3" name="brands/github"></v-icon>
+                    </a>
+                    <a @click="handleRedirect" href="https://gitlab.com/usefss">
+                        <v-icon class="gitlab-i" scale="3" name="brands/gitlab"></v-icon>
+                    </a>
+                    <a @click="handleRedirect" href="https://t.me/THEusefss">
+                        <v-icon class="telegram-i" scale="3" name="brands/telegram"></v-icon>
+                    </a>
+                    <!-- <font-awesome-icon icon="coffee" /> -->
+                    <!-- <font-awesome-icon icon="external-link" /> -->
+
+                    <!-- <v-icon name="brands/external-link" /> -->
                 </div>
             </div>
         </div>
@@ -255,11 +266,14 @@
 
 <script>
 import RadialProgress from '~/components/RadialProgress'
-// import { mapMutations } from 'vuex'
+// import 'vue-awesome/icons/flag'
+// import 'vue-awesome/icons'
+// import Icon from 'vue-awesome/components/Icon'
 
 export default {
     components: {
         'radial-progress': RadialProgress,
+        // 'v-icon': Icon
     },
     data () {
         return {
@@ -292,14 +306,10 @@ export default {
         })
     },
     methods: {
-        printStore() {
-            console.log('print store called')
-            setTimeout(() => {
-                console.log('have to scroll to: ', 
-                    this.$store.state.Ypos
-                )
-                this.printStore()
-            },1000)
+        handleRedirect(event) {
+            event.preventDefault()
+            // console.log(event.target.closest('a').getAttribute('href'))
+            window.open(event.target.closest('a').getAttribute('href'), '_blank')
         },
         handleScroll(event) {
             this.$store.commit('setYpos', window.scrollY)
