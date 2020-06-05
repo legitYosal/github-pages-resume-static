@@ -12,7 +12,8 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'}
     ]
   },
   /*
@@ -23,15 +24,15 @@ export default {
   ** Global CSS
   */
   css: [
-    '~/assets/styles.css'
+    '~/assets/styles.scss'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
     { src: '~/plugins/localStorage.js', ssr: false },
-    { src: '~/plugins/vue-awesome.js'},
-    { src: '~/plugins/vue-fontawesome.js'}
+    { src: '~/plugins/vue-awesome.js', ssr: false},
+    { src: '~/plugins/vue-fontawesome.js', ssr: false}
   ],
   /*
   ** Nuxt.js dev-modules

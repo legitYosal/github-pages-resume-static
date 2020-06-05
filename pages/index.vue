@@ -10,6 +10,17 @@
             </div>
         </div>
     </div>
+<!--     <h1>below is star?</h1>
+    <i class="fa fa-fw fa-star-o"></i> -->
+    <slide-bar :right="true">
+        <a @click="scrollVanilla" :class="{ active: in_top_section }" href="#top-section-id">top</a>
+        <a @click="scrollVanilla" :class="{ active: !in_top_section && in_about_section }" href="#about-section-id">about</a>
+        <a @click="scrollVanilla" :class="{ active: !in_about_section && in_skills_section }" href="#skills-section-id">skills</a>
+        <a @click="scrollVanilla" :class="{ active: !in_skills_section && in_experience_section }" href="#experience-section-id">experience</a>
+        <a @click="scrollVanilla" :class="{ active: !in_experience_section && in_education_section }" href="#education-section-id">education</a>
+        <a @click="scrollVanilla" :class="{ active: !in_education_section && in_portfolio_section }" href="#portfolio-section-id">portfolio</a>
+        <a @click="scrollVanilla" :class="{ active: !in_portfolio_section && in_contact_section }" href="#contact-section-id">contact</a>
+    </slide-bar>
     <div class="nav-place-holder">
     <div id="dynamic-nav-bar-id" class="dynamic-nav-bar">
         <a @click="scrollVanilla" :class="{ active: in_top_section }" href="#top-section-id">top</a>
@@ -33,10 +44,8 @@
                 <div class="about-content-about">
                     <h2 class="white-text">Yosef Salmalian</h2>
                     <h4 class="white-text">Full Stack Web Developer & Hardworking Programmer </h4>
-                    <p class="white-text">this is my life of a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my self.</p>
-                    <p class="white-text">this is my life of a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my self.</p>
-                    <p class="white-text">this is my life of a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my self.</p>
-                    <p class="white-text">this is my life of a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my self.</p>
+                    <p class="white-text">this is my life of a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my selfof a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my selfof a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my self.</p>
+                    <p class="white-text">this is my life of a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my of a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my selfof a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my selfself.</p>
                     <p class="white-text">so i was going to do this any time now</p>
                 </div>
                 <div class="about-content-img">
@@ -140,30 +149,38 @@
                 <h5>my previous associations</h5>
             </div>
             <div class="context-content">
-                <div class="circle-date">
-                    <div class="circle-date-item">
-                        <div class="top-space"></div>
-                        <h5>march,2014</h5>
-                        <h5>present</h5>
+                <div class="card-item">
+                    <div class="date-item-float">
+                        <div class="circle-date-item">
+                            <div class="top-space"></div>
+                            <h5>march, 2014</h5>
+                            <h5>present</h5>
+                        </div>
                     </div>
-                    <div class="top-space"></div>
-                    <div class="circle-date-item">
-                        <div class="top-space"></div>
-                        <h5>march,2014</h5>
-                        <h5>present</h5>
-                    </div>
-                </div>
-                <div class="work-cards">
-                    <div class="card-contain">
+                    <div class="arrow-container">
                         <div class="arrow-shape"></div>
+                    </div>
+                    <div class="card-contain">
                         <div class="card">
                             <p>hello</p>
                         </div>
                     </div>
-                    <div class="card-contain"> 
+                    <!-- <div class="top-space"></div> -->
+                </div>
+                <div class="card-item">
+                    <div class="date-item-float">
+                        <div class="circle-date-item">
+                            <div class="top-space"></div>
+                            <h5>march, 2014</h5>
+                            <h5>present</h5>
+                        </div>
+                    </div>
+                    <div class="arrow-container">
                         <div class="arrow-shape"></div>
+                    </div>
+                    <div class="card-contain"> 
                         <div class="card">
-
+                            <p>hello</p>
                         </div>
                     </div>
                 </div>
@@ -177,16 +194,18 @@
                 <h5>what I have done in my academic career</h5>
             </div>
             <div class="context-content">
-                <div class="circle-date">
-                    <div class="circle-date-item">
-                        <div class="top-space"></div>
-                        <h5>march,2014</h5>
-                        <h5>present</h5>
+                <div class="card-item">
+                    <div class="date-item-float">
+                        <div class="circle-date-item">
+                            <div class="top-space"></div>
+                            <h5>march, 2014</h5>
+                            <h5>present</h5>
+                        </div>
                     </div>
-                </div>
-                <div class="work-cards">
-                    <div class="card-contain">
+                    <div class="arrow-container">
                         <div class="arrow-shape"></div>
+                    </div>
+                    <div class="card-contain">
                         <div class="card">
                             <p>hello</p>
                         </div>
@@ -228,9 +247,11 @@
                 <div class="address-content-bg">
                 <div class="address-content">
                     <div class="contact-details">
-                        <h1>details</h1>
-                        <p>my number is 323wedwefwefwefwef</p>
-                        <p>this is my address</p>
+                        <div class="small-center">
+                            <h1>details</h1>
+                            <p>my number is 323wedwefwefwefwef</p>
+                            <p>this is my address</p>
+                        </div>
                     </div>
                     <div class="contact-with-email">
                         <h1>contact now</h1>
@@ -245,13 +266,13 @@
                 </div>
                 <div class="buttom-bg">
                     <a @click="handleRedirect" href="https://github.com/usefss">
-                        <v-icon class="github-i" scale="3" name="brands/github"></v-icon>
+                        <v-icon @mouseover="handleZoom('github')" class="github-i" v-bind:scale="iconScale.github" name="brands/github"></v-icon>
                     </a>
                     <a @click="handleRedirect" href="https://gitlab.com/usefss">
-                        <v-icon class="gitlab-i" scale="3" name="brands/gitlab"></v-icon>
+                        <v-icon @mouseover="handleZoom('gitlab')" class="gitlab-i" v-bind:scale="iconScale.gitlab" name="brands/gitlab"></v-icon>
                     </a>
                     <a @click="handleRedirect" href="https://t.me/THEusefss">
-                        <v-icon class="telegram-i" scale="3" name="brands/telegram"></v-icon>
+                        <v-icon @mouseover="handleZoom('telegram')" class="telegram-i" v-bind:scale="iconScale.telegram" name="brands/telegram"></v-icon>
                     </a>
                     <!-- <font-awesome-icon icon="coffee" /> -->
                     <!-- <font-awesome-icon icon="external-link" /> -->
@@ -266,6 +287,8 @@
 
 <script>
 import RadialProgress from '~/components/RadialProgress'
+import MenuBar from '~/components/MenuBar'
+import SlideBar from '~/components/SlideBar'
 // import 'vue-awesome/icons/flag'
 // import 'vue-awesome/icons'
 // import Icon from 'vue-awesome/components/Icon'
@@ -273,10 +296,17 @@ import RadialProgress from '~/components/RadialProgress'
 export default {
     components: {
         'radial-progress': RadialProgress,
+        'slide-bar': SlideBar,
+        'menu-bar': MenuBar
         // 'v-icon': Icon
     },
     data () {
         return {
+            iconScale: {
+                github: 4,
+                gitlab: 3,
+                telegram: 3,
+            },
             completedSteps: 70,
             totalSteps: 100,
             lang: 'fa',
@@ -306,6 +336,20 @@ export default {
         })
     },
     methods: {
+        handleZoom(target) {
+            console.log(this.iconScale[target])
+            if (this.iconScale[target] != 4){
+                for (let i in this.iconScale) {
+                    if (i !== target) {
+                        this.iconScale[i] = 3
+                    }
+                }
+                this.iconScale[target] = 4
+                // setTimeout(() => {
+                //     this.iconScale[target] = 3
+                // }, 2000)
+            }
+        },
         handleRedirect(event) {
             event.preventDefault()
             // console.log(event.target.closest('a').getAttribute('href'))
@@ -385,5 +429,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+// @import "~/assets/styles.scss"
 </style>
