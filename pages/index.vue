@@ -271,7 +271,7 @@
                     <a @click="handleRedirect" href="https://gitlab.com/usefss">
                         <v-icon @mouseover="handleZoom('gitlab')" class="gitlab-i" v-bind:scale="iconScale.gitlab" name="brands/gitlab"></v-icon>
                     </a>
-                    <a @click="handleRedirect" href="https://t.me/THEusefss">
+                    <a @click="handleRedirect" href="https://t.me/THEyosefs">
                         <v-icon @mouseover="handleZoom('telegram')" class="telegram-i" v-bind:scale="iconScale.telegram" name="brands/telegram"></v-icon>
                     </a>
                     <!-- <font-awesome-icon icon="coffee" /> -->

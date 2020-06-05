@@ -222,7 +222,7 @@
     }
 
     .bm-burger-bars {
-      background-color: #eee;
+      background-color: white;
     }
     .line-style {
       position: absolute;

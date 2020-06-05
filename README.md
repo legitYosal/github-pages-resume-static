@@ -19,3 +19,21 @@ $ npm run start
 $ npm run generate
 ```
 
+## To Do's
+
+### high
+in slider mode bring down a transition animation for a background black? nav bar for language and burger bar
+
+fill up profile for gods sake its getting late 
+
+### meduim
+some thing is wrong with scrolling with mobiles?? how to solve this??
+
+some thins is wrong with circular progretion bar?? change and use another one...
+
+circle date time item has problems in mobile mode ** interesting fact: when testing on google develop tools on 320px it is very complete but on galaxy j5 circle is just a squre with border radius 10px
+
+### low
+fill up portfolio section with something??
+
+change top section background to something interactive and dynamic with animations??

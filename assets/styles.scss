@@ -597,3 +597,18 @@ svg:hover {
         min-height: 100vh;
     }
 }
+
+#portfolio-section-id h1,
+#portfolio-section-id h5,
+#portfolio-section-id p {
+    color: white;
+}
+
+.address-content h1,
+.address-content h5 {
+    color: white;
+    font-weight: 19;
+}
+.address-content p {
+    color: #eee;
+}
