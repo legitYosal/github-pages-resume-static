@@ -21,6 +21,8 @@ html {
     background-color: #262b37;
     z-index: 100;
 }
+
+
 .buttom-bg a, .buttom-bg a:hover, .buttom-bg a.active{
     padding: 0;
     margin: 0;
@@ -445,7 +447,7 @@ iframe {
 }
 
 .language-buttom:hover {
-    color: #575f77;
+    color: white;
 }
 
 .contact-details {
@@ -583,11 +585,15 @@ svg:hover {
     display: none;
 }
 
+#burger-slider-id {
+    display: none;
+}
+
 @media only screen and (max-width: 1200px) {
     .hidden10 {
         display: block;
     }
-    .dynamic-nav-bar {
+    #dynamic-nav-bar-id {
         display: none;
     }
     .nav-place-holder {
@@ -595,6 +601,9 @@ svg:hover {
     }
     .container {
         min-height: 100vh;
+    }
+    #burger-slider-id {
+        display: block;
     }
 }
 
@@ -611,4 +620,19 @@ svg:hover {
 }
 .address-content p {
     color: #eee;
+}
+
+.circular-item {
+    h2 {
+        font-weight: bold;
+        color: #474d5d;
+    }
+    #observer-tag-id {
+        font-weight: 2;
+    }    
+    p {
+        font-size: 2vh;
+        color: #767984;
+
+    }
 }

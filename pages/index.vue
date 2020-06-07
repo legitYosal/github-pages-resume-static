@@ -1,7 +1,9 @@
 <template>
 <div>
     <!-- <a class="" href="#">english</a> -->
-    <a class="language-buttom" href="#">persian</a>
+
+    <a v-if="lang==='en'" @click="handleLang" class="language-buttom" href="#">فارسی</a>
+    <a v-else @click="handleLang" class="language-buttom" href="#">english</a>
     <div class="cool-img-bg">
         <div id="top-section-id" class="container transparent-black">
             <div class="top-border">
@@ -12,7 +14,7 @@
     </div>
 <!--     <h1>below is star?</h1>
     <i class="fa fa-fw fa-star-o"></i> -->
-    <slide-bar :right="true">
+    <slide-bar id="burger-slider-id" :navPermistion="nav_bg_permistion" :disableEsc="true" :right="true">
         <a @click="scrollVanilla" :class="{ active: in_top_section }" href="#top-section-id">top</a>
         <a @click="scrollVanilla" :class="{ active: !in_top_section && in_about_section }" href="#about-section-id">about</a>
         <a @click="scrollVanilla" :class="{ active: !in_about_section && in_skills_section }" href="#skills-section-id">skills</a>
@@ -22,18 +24,19 @@
         <a @click="scrollVanilla" :class="{ active: !in_portfolio_section && in_contact_section }" href="#contact-section-id">contact</a>
     </slide-bar>
     <div class="nav-place-holder">
-    <div id="dynamic-nav-bar-id" class="dynamic-nav-bar">
-        <a @click="scrollVanilla" :class="{ active: in_top_section }" href="#top-section-id">top</a>
-        <a @click="scrollVanilla" :class="{ active: !in_top_section && in_about_section }" href="#about-section-id">about</a>
-        <a @click="scrollVanilla" :class="{ active: !in_about_section && in_skills_section }" href="#skills-section-id">skills</a>
-        <a @click="scrollVanilla" :class="{ active: !in_skills_section && in_experience_section }" href="#experience-section-id">experience</a>
-        <a @click="scrollVanilla" :class="{ active: !in_experience_section && in_education_section }" href="#education-section-id">education</a>
-        <a @click="scrollVanilla" :class="{ active: !in_education_section && in_portfolio_section }" href="#portfolio-section-id">portfolio</a>
-        <a @click="scrollVanilla" :class="{ active: !in_portfolio_section && in_contact_section }" href="#contact-section-id">contact</a>
+        <div id="dynamic-nav-bar-id" class="dynamic-nav-bar">
+            <a @click="scrollVanilla" :class="{ active: in_top_section }" href="#top-section-id">top</a>
+            <a @click="scrollVanilla" :class="{ active: !in_top_section && in_about_section }" href="#about-section-id">about</a>
+            <a @click="scrollVanilla" :class="{ active: !in_about_section && in_skills_section }" href="#skills-section-id">skills</a>
+            <a @click="scrollVanilla" :class="{ active: !in_skills_section && in_experience_section }" href="#experience-section-id">experience</a>
+            <a @click="scrollVanilla" :class="{ active: !in_experience_section && in_education_section }" href="#education-section-id">education</a>
+            <a @click="scrollVanilla" :class="{ active: !in_education_section && in_portfolio_section }" href="#portfolio-section-id">portfolio</a>
+            <a @click="scrollVanilla" :class="{ active: !in_portfolio_section && in_contact_section }" href="#contact-section-id">contact</a>
 
 
+        </div>
     </div>
-    </div>
+    <!-- <div id="hidden-bg-id" class="hidden-bg"></div> -->
     <div id="about-section-id" class="container-dynamic about-bg">
         <div class="context-container">
             <div class="context-header">
@@ -282,6 +285,7 @@
             </div>
         </div>
     </div>
+    <!-- <qutii/> -->
 </div>
 </template>
 
@@ -289,6 +293,7 @@
 import RadialProgress from '~/components/RadialProgress'
 import MenuBar from '~/components/MenuBar'
 import SlideBar from '~/components/SlideBar'
+// import Qutii from '~/components/Qutii'
 // import 'vue-awesome/icons/flag'
 // import 'vue-awesome/icons'
 // import Icon from 'vue-awesome/components/Icon'
@@ -297,7 +302,8 @@ export default {
     components: {
         'radial-progress': RadialProgress,
         'slide-bar': SlideBar,
-        'menu-bar': MenuBar
+        'menu-bar': MenuBar,
+        // 'qutii': Qutii
         // 'v-icon': Icon
     },
     data () {
@@ -307,9 +313,10 @@ export default {
                 gitlab: 3,
                 telegram: 3,
             },
+            nav_bg_permistion: false,
             completedSteps: 70,
             totalSteps: 100,
-            lang: 'fa',
+            lang: 'en',
             in_top_section: null,
             in_about_section: null,
             in_skills_section: null,
@@ -335,7 +342,16 @@ export default {
             behavior: 'smooth'
         })
     },
+    watch: {
+    },
     methods: {
+        handleLang(event) {
+            event.preventDefault()
+            if (event.target.innerHTML === 'فارسی')
+                this.lang = 'fa'
+            else if (event.target.innerHTML === 'english')
+                this.lang = 'en'
+        },
         handleZoom(target) {
             console.log(this.iconScale[target])
             if (this.iconScale[target] != 4){
@@ -374,10 +390,21 @@ export default {
             new IntersectionObserver(entries => {
                 this.in_top_section = entries[0].isIntersecting
                 let nav_el = document.querySelector('#dynamic-nav-bar-id')
+                let hidden_top = document.querySelector('#hidden-nav-bar-id')
                 if (this.in_top_section) {
+                    console.log('here should disapear')
+                    this.nav_bg_permistion = false
+                    // if (!this.nav_bg_permistion)
+                    // document.querySelector('#hidden-bg-id')
+                    //     .style.display = 'none'
                     nav_el.style.position = 'relative'
                     nav_el.style.top = 'auto'
                 } else {
+                    console.log('here should apear')
+                    this.nav_bg_permistion = true
+                    // if (this.nav_bg_permistion)
+                    //     document.querySelector('#hidden-bg-id')
+                    //         .style.display = 'block'
                     nav_el.style.position = 'fixed'
                     nav_el.style.top = '0'
                 }

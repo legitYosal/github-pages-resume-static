@@ -1,5 +1,8 @@
 <template>
     <div>
+        <transition name="fade">
+            <div v-if="navPermistion" id="hidden-bg-id" class="hidden-bg"></div>
+        </transition>
         <div ref="sideNav" class="bm-menu">
             <nav class="bm-item-list">
                 <slot></slot>
@@ -10,7 +13,7 @@
             </span>
         </div>
 
-        <div ref="bmBurgerButton" class="bm-burger-button hidden10" @click="openMenu" :class="{ hidden: !burgerIcon }">
+        <div ref="bmBurgerButton" class="bm-burger-button " @click="openMenu" :class="{ hidden: !burgerIcon }">
             <span class="bm-burger-bars line-style" :style="{top:20 * (index * 2) + '%'}" v-for="(x, index) in 3" :key="index"></span>
         </div>
 
@@ -70,6 +73,10 @@
           type: Boolean,
           required: false,
           default: true
+        },
+        navPermistion: {
+            type: Boolean,
+            required: true
         }
       },
       methods: {
@@ -77,9 +84,14 @@
             // add hidden to burger button
             document.querySelector('.bm-burger-button')
                 .style.display = 'none'
+            if (this.navPermistion)
+                document.querySelector('#hidden-bg-id')
+                    .style.display = 'none'
+            console.log(this.navPermistion)
+            document.querySelector('.language-buttom')
+                .style.display = 'none'
 
-
-          this.$emit('openMenu');
+          this.$emit('openMenu', 'true');
           this.isSideBarOpen = true;
           if (!this.noOverlay) {
             document.body.classList.add('bm-overlay');
@@ -98,8 +110,14 @@
             // remvoe hidden
             document.querySelector('.bm-burger-button')
                 .style.display = 'block'
+            if (this.navPermistion)
+                document.querySelector('#hidden-bg-id')
+                    .style.display = 'block'
+            console.log(this.navPermistion)
+            document.querySelector('.language-buttom')
+                .style.display = 'block'
 
-          this.$emit('closeMenu');
+          this.$emit('closeMenu', 'false');
           this.isSideBarOpen = false;
           document.body.classList.remove('bm-overlay');
           this.$refs.sideNav.style.width = '0px';
@@ -162,12 +180,12 @@
           immediate: true,
           handler(newValue, oldValue) {
             this.$nextTick(() => {
-              if (!oldValue && newValue) {
-                this.openMenu();
-              }
-              if (oldValue && !newValue) {
-                this.closeMenu();
-              }
+                if (!oldValue && newValue) {
+                    this.openMenu();
+                }
+                if (oldValue && !newValue) {
+                    this.closeMenu();
+                }
             });
           }
         },
@@ -207,7 +225,20 @@
     };
 </script>
 
-<style>
+<style lang="scss">
+
+    .hidden-bg {
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        display: block;
+        min-height: 7vh;
+        /*color: blue;*/
+        background: linear-gradient(90deg, rgba(0,0,0,0.5494572829131652) 0%, rgba(0,0,0,0.15449929971988796) 49%, rgba(0,0,0,0.5522584033613445) 100%);
+        overflow: none;
+        z-index: 100;
+    }
     html {
       height: 100%;
     }
@@ -276,5 +307,12 @@
       margin-left: 10px;
       font-weight: 700;
       color: white;
+    }
+
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity .5s;
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+      opacity: 0;
     }
 </style>
