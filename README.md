@@ -26,6 +26,8 @@ in slider mode bring down a transition animation for a background black? nav bar
 
 fill up profile for gods sake its getting late 
 
+instead of spliting skills to languages and frame works ... split to front back and devops and languages
+
 ### meduim
 some thing is wrong with scrolling with mobiles?? how to solve this??
 
