@@ -233,7 +233,7 @@
         right: 0;
         position: fixed;
         display: block;
-        min-height: 7vh;
+        min-height: 60px;
         /*color: blue;*/
         background: linear-gradient(90deg, rgba(0,0,0,0.5494572829131652) 0%, rgba(0,0,0,0.15449929971988796) 49%, rgba(0,0,0,0.5522584033613445) 100%);
         overflow: none;
@@ -310,7 +310,7 @@
     }
 
     .fade-enter-active, .fade-leave-active {
-      transition: opacity .5s;
+      transition: opacity 1s;
     }
     .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
       opacity: 0;

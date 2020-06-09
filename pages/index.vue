@@ -228,6 +228,27 @@
                         <p>برای کار با بخش کلاینت ای پی آی تلگرام</p>
                     </div>
                 </div>
+<!--                 <vue-ellipse-progress 
+                      :colorFill="red"
+                      :data="circles"                    
+                      :progress="40"
+                      :lineMode="normal"
+                      :angle="-90"
+                      emptyColor="#ccc"
+                      :thickness="14"
+                      emptyThickness="5%"
+                      :legend="true"
+                      animation="bounce 1200 1000"
+                      fontColor="#474d5d"
+                      dot="10 blue"
+                      fontSize="3rem"
+                      >
+                      
+                      <span slot="legend-value">%</span>
+                      <p slot="legend-caption"></p>
+                      
+                </vue-ellipse-progress> -->
+
                 <h4 v-if="$store.state.lang==='en'" style="text-align: left;" class="content-about-divider divider-attention">Attention</h4>
                 <h4 v-if="$store.state.lang==='fa'" style="text-align: right;" class="content-about-divider divider-attention">توجه</h4>
                 <p v-if="$store.state.lang==='en'" style="text-align: left;" class="about-attenction divider-attention">
@@ -426,6 +447,7 @@
                     <!-- <font-awesome-icon icon="external-link" /> -->
 
                     <!-- <v-icon name="brands/external-link" /> -->
+
                 </div>
             </div>
         </div>
@@ -482,10 +504,14 @@ export default {
         }
 
         window.addEventListener('scroll', this.handleScroll)
-        window.scrollTo({
-            top: this.$store.state.Ypos,
-            behavior: 'smooth'
-        })
+        try{
+            window.scrollTo({
+                top: this.$store.state.Ypos,
+                behavior: 'smooth'
+            })
+        } catch (err) {
+            console.log(err)
+        }
     },
     watch: {
     },

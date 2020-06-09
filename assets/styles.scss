@@ -345,14 +345,32 @@ p {
 .circle-date-item {
     /*float: left;*/
     background-color: #ff675f;
-    max-width: 15vh;
-    min-height: 15vh;
+    width: 15vh;
+    height: 15vh;
     margin:auto;
     border-radius: 200px;
     padding: 0;
     margin-bottom: 4vh;
     margin-right: 1vh;
 }
+
+@media only screen and (max-width: 900px) {
+    .circle-date-item {
+        width: 34vh;
+        height: 34vh;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .circle-date-item{
+        width: 23vh;
+        height: 23vh;
+    }
+    .language-buttom{
+        top:0;
+    }
+}
+
 .circle-date-item div.top-space {
     margin:auto;
     padding-top: 6vh;

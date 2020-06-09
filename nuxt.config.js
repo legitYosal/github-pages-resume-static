@@ -32,7 +32,8 @@ export default {
   plugins: [
     { src: '~/plugins/localStorage.js', ssr: false },
     { src: '~/plugins/vue-awesome.js', ssr: false},
-    { src: '~/plugins/vue-fontawesome.js', ssr: false}
+    { src: '~/plugins/vue-fontawesome.js', ssr: false},
+    { src: '~/plugins/vue-ellipse-progress', ssr: false}
   ],
   /*
   ** Nuxt.js dev-modules
