@@ -204,10 +204,14 @@ body {
 .content-about-divider {
     margin-bottom: 30px;
     float: left;
+    color: #aaa;
+    // display: flex;
+    align-self: center;
+    text-align: center;
     width: 100%;
 }
 .divider-attention {
-    color:red;
+    color:#6b64a7;
     padding:0;
     margin: 0;
 }
@@ -234,8 +238,8 @@ body {
 }
 
 .about-content-img img {
-    width: 320px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
     border-radius: 200px;
 }
 @media only screen and (max-width: 1050px) {
@@ -362,6 +366,7 @@ p {
 }
 
 .card-contain {
+    color:#474d5d;
     background-color: #eeeeee;
     float: left;
     width: 79%;

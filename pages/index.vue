@@ -15,13 +15,35 @@
 <!--     <h1>below is star?</h1>
     <i class="fa fa-fw fa-star-o"></i> -->
     <slide-bar id="burger-slider-id" :navPermistion="nav_bg_permistion" :disableEsc="true" :right="true">
-        <a @click="scrollVanilla" :class="{ active: in_top_section }" href="#top-section-id">top</a>
-        <a @click="scrollVanilla" :class="{ active: !in_top_section && in_about_section }" href="#about-section-id">about</a>
-        <a @click="scrollVanilla" :class="{ active: !in_about_section && in_skills_section }" href="#skills-section-id">skills</a>
-        <a @click="scrollVanilla" :class="{ active: !in_skills_section && in_experience_section }" href="#experience-section-id">experience</a>
-        <a @click="scrollVanilla" :class="{ active: !in_experience_section && in_education_section }" href="#education-section-id">education</a>
-        <a @click="scrollVanilla" :class="{ active: !in_education_section && in_portfolio_section }" href="#portfolio-section-id">portfolio</a>
-        <a @click="scrollVanilla" :class="{ active: !in_portfolio_section && in_contact_section }" href="#contact-section-id">contact</a>
+            <a @click="scrollVanilla" :class="{ active: in_top_section }" href="#top-section-id">
+                <div v-if="$store.state.lang==='en'">top</div>
+                <div v-if="$store.state.lang==='fa'">برو بالا</div>
+            </a>
+            <a @click="scrollVanilla" :class="{ active: !in_top_section && in_about_section }" href="#about-section-id">
+                <div v-if="$store.state.lang==='en'">about</div>
+                <div v-if="$store.state.lang==='fa'">درباره من</div>
+            </a>
+            <a @click="scrollVanilla" :class="{ active: !in_about_section && in_skills_section }" href="#skills-section-id">
+                <div v-if="$store.state.lang==='en'">skills</div>
+                <div v-if="$store.state.lang==='fa'">مهارت ها</div>
+            </a>
+            <a @click="scrollVanilla" :class="{ active: !in_skills_section && in_experience_section }" href="#experience-section-id">
+                <div v-if="$store.state.lang==='en'">experience</div>
+                <div v-if="$store.state.lang==='fa'">سابقه</div>
+            </a>
+            <a @click="scrollVanilla" :class="{ active: !in_experience_section && in_education_section }" href="#education-section-id">
+                <div v-if="$store.state.lang==='en'">education</div>
+                <div v-if="$store.state.lang==='fa'">تحصیلات</div>
+            </a>
+            <a @click="scrollVanilla" :class="{ active: !in_education_section && in_portfolio_section }" href="#portfolio-section-id">
+                <div v-if="$store.state.lang==='en'">portfolio</div>
+                <div v-if="$store.state.lang==='fa'">کار های من</div>
+            </a>
+            <a @click="scrollVanilla" :class="{ active: !in_portfolio_section && in_contact_section }" href="#contact-section-id">
+                <div v-if="$store.state.lang==='en'">contact</div>
+                <div v-if="$store.state.lang==='fa'">تماس با من</div>
+            </a>
+
     </slide-bar>
     <div class="nav-place-holder">
         <div id="dynamic-nav-bar-id" class="dynamic-nav-bar">
@@ -72,25 +94,33 @@
             </div>
             <div class="context-content">
                 <div v-if="$store.state.lang==='fa'" class="about-content-img">
-                    <img src="~/static/notme.jpeg">
+                    <img src="~/static/me.jpg">
                 </div>
                 <div class="about-content-about" :class="{ rtl: $store.state.lang==='fa' }">
                     <div v-if="$store.state.lang==='en'">
                         <h2 class="white-text">Yosef Salmalian</h2>
-                        <h4 class="white-text">Full Stack Web Developer & Hardworking Programmer </h4>
-                        <p class="white-text">this is my life of a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my selfof a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my selfof a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my self.</p>
-                        <p class="white-text">this is my life of a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my of a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my selfof a programmer lorem ipsolimg du du du ha ha lll adn after all i am al latin guy my selfself.</p>
-                        <p class="white-text">so i was going to do this any time now</p>
+                        <h4 class="white-text">Full Stack Web Developer</h4>
+                        <p class="white-text">
+                            I am a curious and an active programmer, looking to learn and experience new things, I do not believe in talent and I think that everybody can learn what they want if they take the time for it
+                        </p>
+                        <p class="white-text">
+                           I am a student now so I can do freelancing and part-time works, if you are interested, send me a message 
+                        </p>
                     </div>
                     <div v-if="$store.state.lang==='fa'">
                         <h2 class="white-text">یوسف سلملیان</h2>                        
                         <h4 class="white-text">توسعه دهنده فول استک وب</h4>
-                        <p class="white-text">لورم اپسیلوم دو دو دو ها ها ها بلاه لباه بلاهلورم اپسیلوم دو دو دو ها ها ها بلاه لباه بلاهلورم اپسیلوم دو دو دو ها ها ها بلاه لباه بلاهلورم اپسیلوم دو دو دو ها ها ها بلاه لباه بلاهلورم اپسیلوم دو دو دو ها ها ها بلاه لباه بلاهلورم اپسیلوم دو دو دو ها ها ها بلاه لباه بلاهلورم اپسیلوم دو دو دو ها ها ها بلاه لباه بلاهلورم اپسیلوم دو دو دو ها ها ها بلاه لباه بلاهلورم اپسیلوم دو دو دو ها ها ها بلاه لباه بلاه</p>
-                        <p class="white-text">و این قراره که پاراگراف آخر باشه</p>
+                        <p class="white-text">
+                            من یک برنامه نویس کنجکاو و فعال هستم، به دنبال یادگیری و تجربه چیز های جدیدم، من به استعداد معتقد نیستم و فکر میکنم که هر کسی میتونه اون چیزی که براش وقت میزاره رو یاد بگیره
+                        </p>
+
+                        <p class="white-text">
+                            من چون که در حال تحصیل هستم میتونم کارهای پارت تایم و دور کاری انجام بدم اگه علاقه مندین میتونین به من پیام بدین
+                        </p>
                     </div>
                 </div>
                 <div v-if="$store.state.lang==='en'" class="about-content-img">
-                    <img src="~/static/notme.jpeg">
+                    <img src="~/static/me.jpg">
                 </div>
             </div>
         </div>
@@ -110,13 +140,13 @@
             </div>
             <div class="context-content">
 
-                <h2 v-if="$store.state.lang==='en'" style="text-align: left;" class="content-about-divider">Programming Languages</h2>
-                <h2 v-if="$store.state.lang==='fa'" style="text-align: right;" class="content-about-divider">زبان های برنامه نویسی</h2>
+                <h2 v-if="$store.state.lang==='en'" class="content-about-divider">Programming Languages</h2>
+                <h2 v-if="$store.state.lang==='fa'"  class="content-about-divider">زبان های برنامه نویسی</h2>
                 <div class="circular-item">
                     <radial-progress
                         :diameter="180"
                         :total-steps="totalSteps"
-                        :toComplete="90"
+                        :toComplete="70"
                         :fillTimeOut="1"
                     >
                     </radial-progress>
@@ -132,7 +162,7 @@
                     <radial-progress
                         :diameter="180"
                         :total-steps="totalSteps"
-                        :toComplete="90"
+                        :toComplete="55"
                         :fillTimeOut="1"
                     >
                     </radial-progress>
@@ -148,7 +178,7 @@
                     <radial-progress
                         :diameter="180"
                         :total-steps="totalSteps"
-                        :toComplete="90"
+                        :toComplete="55"
                         :fillTimeOut="1"
                     >
                     </radial-progress>
@@ -160,13 +190,13 @@
                         <p>سریع ترین زبان و پایه تمام سیستم عامل ها</p>
                     </div>
                 </div>
-                <h2 v-if="$store.state.lang==='en'" style="text-align: left;" class="content-about-divider">Frameworks</h2>
-                <h2 v-if="$store.state.lang==='fa'" style="text-align: right;" class="content-about-divider">فریم ورک ها</h2>
+                <h2 v-if="$store.state.lang==='en'" class="content-about-divider">Frameworks</h2>
+                <h2 v-if="$store.state.lang==='fa'"  class="content-about-divider">فریم ورک ها</h2>
                 <div class="circular-item">
                     <radial-progress
                         :diameter="180"
                         :total-steps="totalSteps"
-                        :toComplete="50"
+                        :toComplete="60"
                         :fillTimeOut="1"
                     >
                     </radial-progress>
@@ -182,7 +212,7 @@
                     <radial-progress
                         :diameter="180"
                         :total-steps="totalSteps"
-                        :toComplete="90"
+                        :toComplete="50"
                         :fillTimeOut="1"
                     >
                     </radial-progress>
@@ -198,7 +228,7 @@
                     <radial-progress
                         :diameter="180"
                         :total-steps="totalSteps"
-                        :toComplete="90"
+                        :toComplete="60"
                         :fillTimeOut="1"
                     >
                     </radial-progress>
@@ -210,13 +240,13 @@
                         <p>فریم ورک توسعه بات های تلگرام</p>
                     </div>
                 </div>
-                <h2 v-if="$store.state.lang==='en'" style="text-align: left;" class="content-about-divider">Packages & Libraries</h2>
-                <h2 v-if="$store.state.lang==='fa'" style="text-align: right;" class="content-about-divider">کتاب خانه ها و پکیج ها</h2>
+                <h2 v-if="$store.state.lang==='en'" class="content-about-divider">Packages & Libraries</h2>
+                <h2 v-if="$store.state.lang==='fa'"  class="content-about-divider">کتاب خانه ها و پکیج ها</h2>
                 <div class="circular-item">
                     <radial-progress
                         :diameter="180"
                         :total-steps="totalSteps"
-                        :toComplete="90"
+                        :toComplete="70"
                         :fillTimeOut="1"
                     >
                     </radial-progress>
@@ -250,12 +280,12 @@
                 </vue-ellipse-progress> -->
 
                 <h4 v-if="$store.state.lang==='en'" style="text-align: left;" class="content-about-divider divider-attention">Attention</h4>
-                <h4 v-if="$store.state.lang==='fa'" style="text-align: right;" class="content-about-divider divider-attention">توجه</h4>
+                <h4 v-if="$store.state.lang==='fa'" style="margin-bottom: 10px;text-align: right;" class="content-about-divider divider-attention">توضیح</h4>
                 <p v-if="$store.state.lang==='en'" style="text-align: left;" class="about-attenction divider-attention">
-                    no body says i now 80% of a language....
+                    These progress bars are very cool but I don't mean that I know 50% of a language, what I mean is 30 - 50% is where you have learned basics and have done tutorial projects,  50 - 70% is where you have a lot working and doing some deep thinking on it.
                 </p>
                 <p v-if="$store.state.lang==='fa'" style="text-align: right;" class="about-attenction divider-attention">
-                    هیچکی نمیگه که ۹۰ درصد یاد دارم....
+                    این نوار پیشرفت ها رو برای زیبایی گزاشتم، و منظورم این نیست که من ۷۰٪ یک زبان رو میدونم. منظور من اینه که بین ۳۰-۵۰٪ پروژه های آموزشی انجام دادم و با پایه آشنا هستم. و بین ۵۰ - ۷۰٪ جاییه که وقت زیادی روش گزاشتم و همچنین پروژه های کوچکی انجام دادم
                 </p>
             </div>
         </div>
@@ -294,11 +324,11 @@
                         <div class="card" style="margin:10px;">
                             <div v-if="$store.state.lang==='en'" style="text-align: left; margin-left: 30px;">
                                 <h3>frelancing</h3>
-                                <p>doing freelancing works</p>
+                                <p>doing freelancing projects like telegram bots.</p>
                             </div>
                             <div v-if="$store.state.lang==='fa'" style="text-align: right; margin-right: 30px;">
                                 <h3>فریلنسر</h3>
-                                <p>انجام پروژه های کوچیک از جاهای مختلف</p>
+                                <p>انجام پروژه های کوچک از جاهای مختلف، از کانال های پروژه و پونیشا، نوشتن بات های تلگرامی و غیره</p>
                             </div>
                         </div>
                     </div>
@@ -339,12 +369,12 @@
                     <div class="card-contain">
                         <div class="card" style="margin:10px;">
                             <div v-if="$store.state.lang==='en'" style="text-align: left; margin-left: 30px;">
-                                <h3>frelancing</h3>
-                                <p>doing freelancing works</p>
+                                <h3>a computer engineering student at Ferdowsi university </h3>
+                                <p>still learning at university, passed computer networks & operating systems & advanced programming with good result</p>
                             </div>
                             <div v-if="$store.state.lang==='fa'" style="text-align: right; margin-right: 30px;">
                                 <h3>مهندسی کامپیوتر، دانشگاه فردوسی مشهد</h3>
-                                <p>در حال تحصیل در رشته مهندسی کامپیوتر هستم</p>
+                                <p>در حال تحصیل در رشته مهندسی کامپیوتر هستم و همچنین درس های شبکه های کامپیوتری و سیستم های عامل و برنامه نویسی پیشرفته را با نمره خوب گذرانده ام</p>
                             </div>
                         </div>
                     </div>
@@ -366,7 +396,14 @@
 
             </div>
             <div class="context-content">
-                <p>these are portfolio</p>
+                <div v-if="$store.state.lang==='en'">
+                    <p>Going to Add this in future</p> 
+                    <p>this single page static web application is writen in vue.js using nuxt.js framework</p>
+                </div>
+                <div v-if="$store.state.lang==='fa'">
+                    <p>بعدا اضاف خواهد شد</p>
+                    <p>همین وب سایت با استفاده از ویو جی اس و نوکست جی اس نوشته شده است</p>
+                </div>
             </div>
         </div>
     </div>

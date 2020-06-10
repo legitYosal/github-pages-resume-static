@@ -4,6 +4,7 @@
 
 <style scoped lang="scss">
     svg {
+        color: white;
         background: none;
         height: 30px;
         width: 30px;

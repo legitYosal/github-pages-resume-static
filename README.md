@@ -24,7 +24,7 @@ $ npm run generate
 ### high
 in slider mode bring down a transition animation for a background black? nav bar for language and burger bar OK
 
-fill up profile for gods sake its getting late IMPORTANT JUST FILL IIIIITTTTT
+fill up profile for gods sake its getting late IMPORTANT JUST FILL IIIIITTTTT OK!!
 
 instead of spliting skills to languages and frame works ... split to front back and devops and languages
 
