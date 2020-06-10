@@ -7,8 +7,14 @@
     <div class="cool-img-bg">
         <div id="top-section-id" class="container transparent-black">
             <div class="top-border">
-                <h2 class="title">in development</h2>
-                <p class="subtitle">درحال توسعه</p>
+                <div v-if="$store.state.lang==='en'">
+                <h2 class="title">Yosef Salmalian</h2>
+                <p class="subtitle">Web developer and fast learner</p>
+                </div>
+                <div v-if="$store.state.lang==='fa'">
+                    <h2 class="title">یوسف سلملیان</h2>
+                    <p class="subtitle">توسعه دهنده بکند و فرانت اند</p>
+                </div>
             </div>
         </div>
     </div>
