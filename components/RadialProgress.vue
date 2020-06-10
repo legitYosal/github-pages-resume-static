@@ -220,12 +220,17 @@ export default {
   mounted: function() {
     let el = this.$el.querySelector('#observer-tag-id')
     if (
+        screen.width > 700 &&
         process.client &&
         "IntersectionObserver" in window &&
         "IntersectionObserverEntry" in window && 
         "intersectionRatio" in window.IntersectionObserverEntry.prototype
     ){
         this.handleObservers(el)
+    } 
+    else {
+        console.log(screen.width)
+        this.completedSteps = this.toComplete
     }
   },
   methods: {

@@ -63,7 +63,7 @@
             <div class="context-header">
                 <h1 class="white-text">
                     <div v-if="$store.state.lang==='en'">about me</div>
-                    <div v-if="$store.state.lang==='fa'">درباره من</div>
+                    <div v-if="$store.state.lang==='fa'"  style="margin-bottom: 5px;">درباره من</div>
                 </h1>
                 <h5 class="white-text">
                     <div v-if="$store.state.lang==='en'">A small intrudoction about my self</div>
@@ -74,7 +74,7 @@
                 <div v-if="$store.state.lang==='fa'" class="about-content-img">
                     <img src="~/static/notme.jpeg">
                 </div>
-                <div class="about-content-about" :class="{ rtl: lang==='fa' }">
+                <div class="about-content-about" :class="{ rtl: $store.state.lang==='fa' }">
                     <div v-if="$store.state.lang==='en'">
                         <h2 class="white-text">Yosef Salmalian</h2>
                         <h4 class="white-text">Full Stack Web Developer & Hardworking Programmer </h4>
@@ -104,7 +104,7 @@
                     <h5>That I can say i'm good at</h5>
                 </div>
                 <div v-if="$store.state.lang==='fa'">
-                    <h1>مهارت های من</h1>
+                    <h1 style="margin-bottom:5px;">مهارت های من</h1>
                     <h5>که میتونم بگم در انجامشون خوب عمل میکنم</h5>
                 </div>
             </div>
@@ -166,7 +166,7 @@
                     <radial-progress
                         :diameter="180"
                         :total-steps="totalSteps"
-                        :toComplete="90"
+                        :toComplete="50"
                         :fillTimeOut="1"
                     >
                     </radial-progress>
@@ -268,7 +268,7 @@
                     <h5>my previous associations</h5>
                 </div>
                 <div v-if="$store.state.lang==='fa'">
-                    <h1>تجربه کاری</h1>
+                    <h1 style="margin-bottom:5px;">تجربه کاری</h1>
                     <h5>تجربه های کاری من در گذشته</h5>
                 </div>
             </div>
@@ -314,7 +314,7 @@
                     <h5>what I have done in my academic career</h5>
                 </div>
                 <div v-if="$store.state.lang==='fa'">
-                    <h1>تحصیلات و آموزش ها</h1>
+                    <h1 style="margin-bottom:5px;">تحصیلات و آموزش ها</h1>
                     <h5>تحصیلات و آموزش هایی که من گرفتم</h5>
                 </div>
             </div>
@@ -360,7 +360,7 @@
                     <h5>Show case of my works</h5>
                 </div>
                 <div v-if="$store.state.lang==='fa'">
-                    <h1>نمونه کارها</h1>
+                    <h1 style="margin-bottom:5px;">نمونه کارها</h1>
                     <h5>تعدای از نمونه کار های من و توضیحاتی خلاصه در مورد آنها</h5>
                 </div>
 
@@ -378,7 +378,7 @@
                     <h5>please feel free if you whould like to have a chat</h5>
                 </div>
                 <div v-if="$store.state.lang==='fa'">
-                    <h1>با من تماس بگیرید</h1>
+                    <h1 style="margin-bottom:5px;">با من تماس بگیرید</h1>
                     <h5>راه های ارتباطی تا بتونید با هم صجبت کنیم</h5>
                 </div>
 
@@ -401,33 +401,20 @@
                     <div class="contact-details">
                         <div class="small-center">
                             <div v-if="$store.state.lang==='en'">
-                                <h1>details</h1>
-                                <p>my number is 323wedwefwefwefwef</p>
-                                <p>this is my address</p>
+                                <h1>contact details</h1>
+
                             </div>
-                            <div v-if="$store.state.lang==='fa'" style="text-align: right; margin-right: 10px;">
+                            <div v-if="$store.state.lang==='fa'" style=" margin-bottom: 10px;">
                                 <h1>اطلاعات تماس</h1>
-                                <p>شماره تماس من اینه۳۲۳۲۳۲۳۰</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="contact-with-email">
-                        <div v-if="$store.state.lang==='en'">
-                            <h1>going to delete this</h1>
-                            <div class="inp-container">
-                                <input spellcheck="false" placeholder="your name..." type="name" name="" class="inp inp-top-l">
-                                <input spellcheck="false" placeholder="your email..." type="email" name="" class="inp inp-top-r">
-                                <textarea spellcheck="false" placeholder="your message..." type="text" name="" class="inp inp-botton"></textarea>
-                                <a href="" class="email-buttom">send message</a>
+                            <hr style="margin-bottom: 20px;">
+                            <div class="icon-container">
+                                <phone-solid-icon></phone-solid-icon>
+                                <p>+989154164897</p>
                             </div>
-                        </div>
-                        <div v-if="$store.state.lang==='fa'">
-                            <h1 style="text-align: right;">میخوام حذف بشه</h1>
-                            <div class="inp-container">
-                                <input spellcheck="false" style="text-align: center;" placeholder="نام را وارد کنید" type="name" name="" class="inp inp-top-l">
-                                <input spellcheck="false" style="text-align: center;" placeholder="ایمیل را وارد کنید" type="email" name="" class="inp inp-top-r">
-                                <textarea spellcheck="false" style="text-align: center;" placeholder="پیامتان را وارد کنید" type="text" name="" class="inp inp-botton"></textarea>
-                                <a href="" class="email-buttom">بفرست</a>
+                            <div class="icon-container">
+                                <envelope-solid-icon></envelope-solid-icon>
+                                <p>flaslnm@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -460,6 +447,8 @@
 import RadialProgress from '~/components/RadialProgress'
 import MenuBar from '~/components/MenuBar'
 import SlideBar from '~/components/SlideBar'
+import PhoneSolidIcon from '~/components/icons/PhoneSolidIcon'
+import EnvelopeSolidIcon from '~/components/icons/EnvelopeSolid'
 // import Qutii from '~/components/Qutii'
 // import 'vue-awesome/icons/flag'
 // import 'vue-awesome/icons'
@@ -470,6 +459,8 @@ export default {
         'radial-progress': RadialProgress,
         'slide-bar': SlideBar,
         'menu-bar': MenuBar,
+        'phone-solid-icon': PhoneSolidIcon,
+        'envelope-solid-icon': EnvelopeSolidIcon,
         // 'qutii': Qutii
         // 'v-icon': Icon
     },
@@ -563,7 +554,6 @@ export default {
                 let nav_el = document.querySelector('#dynamic-nav-bar-id')
                 let hidden_top = document.querySelector('#hidden-nav-bar-id')
                 if (this.in_top_section) {
-                    console.log('here should disapear')
                     this.nav_bg_permistion = false
                     // if (!this.nav_bg_permistion)
                     // document.querySelector('#hidden-bg-id')
@@ -571,7 +561,6 @@ export default {
                     nav_el.style.position = 'relative'
                     nav_el.style.top = 'auto'
                 } else {
-                    console.log('here should apear')
                     this.nav_bg_permistion = true
                     // if (this.nav_bg_permistion)
                     //     document.querySelector('#hidden-bg-id')
