@@ -5,11 +5,16 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    // title: process.env.npm_package_name || 'یوسف سلملیان',
+    title: 'یوسف سلملیان',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      // { hid: 'description', name: 'description', content: process.env.npm_package_description || 'برنامه نویس ،طراحی سایت، به صورت داینامیک و کاملا اختصاصی و وب سایت های پورتفولیو و استاتیک، طراحی ربات تلگرامی، انجام پروژه های برنامه نویسی' }
+      // { hid: 'description', name: 'description', content: 'برنامه نویس ،طراحی سایت، به صورت داینامیک و کاملا اختصاصی و وب سایت های پورتفولیو و استاتیک، طراحی ربات تلگرامی، انجام پروژه های برنامه نویسی' }
+      { hid: 'description', name: 'description', content: 'وب سایت شخصی من، برنامه نویسی و طراحی وب سایت به صورت ریسپانسیو، سایت های استاتیک و داینامیک به صورت اختصاصی، انجام پروژه ربات های تلگرامی' },
+      { hid: 'keywords', name: 'keywords', content: 'یوسف سلملیان, yosef salmalian, سلملیان, salmalian, portfolio, پورتفولیو, resume, رزومه, ویو جی اس, vue.js, شخصی, وب سایت شخصی'},
+      { hid: 'author', name: 'author', content: 'yosef salmalian'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

@@ -100,7 +100,7 @@
             </div>
             <div class="context-content">
                 <div v-if="$store.state.lang==='fa'" class="about-content-img">
-                    <img src="~/static/me.jpg">
+                    <img src="~/static/me.jpg" alt="my picture">
                 </div>
                 <div class="about-content-about" :class="{ rtl: $store.state.lang==='fa' }">
                     <div v-if="$store.state.lang==='en'">
@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div v-if="$store.state.lang==='en'" class="about-content-img">
-                    <img src="~/static/me.jpg">
+                    <img src="~/static/me.jpg" alt="تصیور من">
                 </div>
             </div>
         </div>
