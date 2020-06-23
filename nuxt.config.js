@@ -14,7 +14,8 @@ export default {
       // { hid: 'description', name: 'description', content: 'برنامه نویس ،طراحی سایت، به صورت داینامیک و کاملا اختصاصی و وب سایت های پورتفولیو و استاتیک، طراحی ربات تلگرامی، انجام پروژه های برنامه نویسی' }
       { hid: 'description', name: 'description', content: 'وب سایت شخصی من، برنامه نویسی و طراحی وب سایت به صورت ریسپانسیو، سایت های استاتیک و داینامیک به صورت اختصاصی، انجام پروژه ربات های تلگرامی' },
       { hid: 'keywords', name: 'keywords', content: 'یوسف سلملیان, yosef salmalian, سلملیان, salmalian, portfolio, پورتفولیو, resume, رزومه, ویو جی اس, vue.js, شخصی, وب سایت شخصی'},
-      { hid: 'author', name: 'author', content: 'yosef salmalian'}
+      { hid: 'author', name: 'author', content: 'yosef salmalian'},
+      { hid: 'google-site-verification', name:'google-site-verification', content: 'GAMMYiNEg2SPU_RgpZjBbHcfR9TwmSMt7_oMlJpMJKM'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
