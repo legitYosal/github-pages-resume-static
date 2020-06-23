@@ -7,6 +7,9 @@ export default {
   head: {
     // title: process.env.npm_package_name || 'یوسف سلملیان',
     title: 'یوسف سلملیان',
+    script: [
+        { src: "https://www.googletagmanager.com/gtag/js?id=G-EGFW7EJ9BC", async:true }
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -39,8 +42,7 @@ export default {
     { src: '~/plugins/localStorage.js', ssr: false },
     { src: '~/plugins/vue-awesome.js', ssr: false},
     { src: '~/plugins/vue-fontawesome.js', ssr: false},
-    { src: '~/plugins/vue-ellipse-progress', ssr: false},
-    { src: '~plugins/ga.js', mode: 'client' }
+    { src: '~/plugins/vue-ellipse-progress', ssr: false}
   ],
   /*
   ** Nuxt.js dev-modules

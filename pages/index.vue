@@ -492,10 +492,12 @@ import MenuBar from '~/components/MenuBar'
 import SlideBar from '~/components/SlideBar'
 import PhoneSolidIcon from '~/components/icons/PhoneSolidIcon'
 import EnvelopeSolidIcon from '~/components/icons/EnvelopeSolid'
-// import Qutii from '~/components/Qutii'
-// import 'vue-awesome/icons/flag'
-// import 'vue-awesome/icons'
-// import Icon from 'vue-awesome/components/Icon'
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-EGFW7EJ9BC');
 
 export default {
     components: {
